@@ -1,0 +1,61 @@
+{
+  "connectorName": "snowflake",
+  "operationName": "execute",
+  "title": "Execute a given SQL statement",
+  "help": " <h1>Execute SQL Statement</h1><b>Execute a the given SQL statement</b>",
+  "elements": [
+    {
+      "type": "attributeGroup",
+      "value": {
+        "groupName": "General",
+        "elements": [
+          {
+            "type": "attribute",
+            "value": {
+              "name": "configRef",
+              "displayName": "Snowflake Connection",
+              "inputType": "connection",
+              "allowedConnectionTypes": [
+                "Snowflake"
+              ],
+              "defaultType": "connection.Snowflake",
+              "defaultValue": "",
+              "required": "true",
+              "helpTip": "Snowflake connection to be used"
+            }
+          },
+          {
+            "type": "attributeGroup",
+            "value": {
+              "groupName": "Basic",
+              "elements": [
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "executeQuery",
+                    "displayName": "Execute Query",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "true",
+                    "helpTip": "SQL query to execute"
+                  }
+                },
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "payload",
+                    "displayName": "Payload",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "true",
+                    "helpTip": "Payload to be used in the query"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

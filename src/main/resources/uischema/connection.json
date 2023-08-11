@@ -1,0 +1,69 @@
+{
+  "connectorName": "snowflake",
+  "connectionName": "Snowflake",
+  "title": "Snowflake Connection",
+  "help": "<h1>Snowflake Connector</h1>",
+  "elements": [
+    {
+      "type": "attribute",
+      "value": {
+        "name": "connectionName",
+        "displayName": "Connection Name",
+        "inputType": "string",
+        "defaultValue": "SNOWFLAKE_CONNECTION_1",
+        "required": "true",
+        "helpTip": "The name for the snowflake connection",
+        "validation": "nameWithoutSpecialCharactors"
+      }
+    },
+    {
+      "type": "attributeGroup",
+      "value": {
+        "groupName": "General",
+        "elements": [
+          {
+            "type": "attributeGroup",
+            "value": {
+              "groupName": "Basic",
+              "elements": [
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "accountIdentifier",
+                    "displayName": "Account Identifier",
+                    "inputType": "string",
+                    "defaultValue": "",
+                    "required": "true",
+                    "helpTip": "The unique identifies the Snowflake account."
+                  }
+                },
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "user",
+                    "displayName": "Username",
+                    "inputType": "string",
+                    "defaultValue": "",
+                    "required": "true",
+                    "helpTip": "Username you use to login to Snowflake account"
+                  }
+                },
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "password",
+                    "displayName": "Password",
+                    "inputType": "string",
+                    "defaultValue": "",
+                    "required": "true",
+                    "helpTip": "Password you use to login to Snowflake account."
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
